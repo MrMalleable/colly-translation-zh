@@ -1,0 +1,609 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>多收集器的使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="爬虫配置.html" />
+    
+    
+    <link rel="prev" href="后端存储.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../简介/">
+            
+                <a href="../简介/">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../简介/如何安装.html">
+            
+                <a href="../简介/如何安装.html">
+            
+                    
+                    如何安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../简介/如何开始.html">
+            
+                <a href="../简介/如何开始.html">
+            
+                    
+                    如何开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../简介/配置.html">
+            
+                <a href="../简介/配置.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    最佳实践
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="调试.html">
+            
+                <a href="调试.html">
+            
+                    
+                    调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="分布式爬虫.html">
+            
+                <a href="分布式爬虫.html">
+            
+                    
+                    分布式爬虫
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="后端存储.html">
+            
+                <a href="后端存储.html">
+            
+                    
+                    后端存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="多收集器的使用.html">
+            
+                <a href="多收集器的使用.html">
+            
+                    
+                    多收集器的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="爬虫配置.html">
+            
+                <a href="爬虫配置.html">
+            
+                    
+                    爬虫配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="扩展.html">
+            
+                <a href="扩展.html">
+            
+                    
+                    扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../例子/">
+            
+                <a href="../例子/">
+            
+                    
+                    例子
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../例子/基本使用.html">
+            
+                <a href="../例子/基本使用.html">
+            
+                    
+                    基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../例子/异常处理.html">
+            
+                <a href="../例子/异常处理.html">
+            
+                    
+                    异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../例子/登录.html">
+            
+                <a href="../例子/登录.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../例子/最大深度.html">
+            
+                <a href="../例子/最大深度.html">
+            
+                    
+                    最大深度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../例子/文件上传.html">
+            
+                <a href="../例子/文件上传.html">
+            
+                    
+                    文件上传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../例子/并发.html">
+            
+                <a href="../例子/并发.html">
+            
+                    
+                    并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../例子/代理转换器.html">
+            
+                <a href="../例子/代理转换器.html">
+            
+                    
+                    代理转换器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../例子/队列.html">
+            
+                <a href="../例子/队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../例子/随机延迟.html">
+            
+                <a href="../例子/随机延迟.html">
+            
+                    
+                    随机延迟
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../例子/频率限制.html">
+            
+                <a href="../例子/频率限制.html">
+            
+                    
+                    频率限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../例子/Redis后端.html">
+            
+                <a href="../例子/Redis后端.html">
+            
+                    
+                    Redis后端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../例子/请求上下文.html">
+            
+                <a href="../例子/请求上下文.html">
+            
+                    
+                    请求上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../例子/爬虫服务.html">
+            
+                <a href="../例子/爬虫服务.html">
+            
+                    
+                    爬虫服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../例子/链接过滤器.html">
+            
+                <a href="../例子/链接过滤器.html">
+            
+                    
+                    链接过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >多收集器的使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x591A;&#x6536;&#x96C6;&#x5668;&#x7684;&#x4F7F;&#x7528;">&#x591A;&#x6536;&#x96C6;&#x5668;&#x7684;&#x4F7F;&#x7528;</h2>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x722C;&#x866B;&#x4EFB;&#x52A1;&#x8DB3;&#x591F;&#x590D;&#x6742;&#x6216;&#x8005;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x6709;&#x7740;&#x5F88;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x5B50;&#x4EFB;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x975E;&#x5E38;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x6536;&#x96C6;&#x5668;&#x6765;&#x7F16;&#x5199;&#x722C;&#x866B;&#x4EFB;&#x52A1;&#x3002;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x4F8B;&#x5B50;&#x5C31;&#x662F;<a href="http://go-colly.org/docs/examples/coursera_courses" target="_blank">coursera course scraper</a>&#xFF0C;&#x8FD9;&#x4E2A;&#x722C;&#x866B;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x6536;&#x96C6;&#x5668;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x8F6C;&#x6362;&#x5217;&#x8868;&#x89C6;&#x56FE;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x5206;&#x9875;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x6536;&#x96C6;&#x8BFE;&#x7A0B;&#x7684;&#x8BE6;&#x60C5;&#x3002;</p>
+<p>Colly&#x6846;&#x67B6;&#x6709;&#x4E00;&#x4E9B;&#x5185;&#x7F6E;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x652F;&#x6301;&#x591A;&#x6536;&#x96C6;&#x5668;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<blockquote>
+<p><strong>Tip</strong></p>
+<p><strong>&#x5728;&#x8C03;&#x8BD5;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;collector.ID&#x6765;&#x533A;&#x5206;&#x4E0D;&#x540C;&#x7684;&#x6536;&#x96C6;&#x5668;</strong></p>
+</blockquote>
+<h3 id="&#x514B;&#x9686;&#x6536;&#x96C6;&#x5668;">&#x514B;&#x9686;&#x6536;&#x96C6;&#x5668;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x548C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x6536;&#x96C6;&#x5668;&#x76F8;&#x4F3C;&#x914D;&#x7F6E;&#x7684;&#x6536;&#x96C6;&#x5668;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x53E6;&#x5916;&#x90A3;&#x4E2A;&#x6536;&#x96C6;&#x5668;&#x7684;<strong>Clone()</strong>&#x65B9;&#x6CD5;&#x3002;<strong>Clone()</strong>&#x65B9;&#x6CD5;&#x590D;&#x5236;&#x4E86;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x76F8;&#x540C;&#x914D;&#x7F6E;&#x7684;&#x6536;&#x96C6;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x4E00;&#x8D77;&#x590D;&#x5236;&#x3002;</p>
+<pre><code class="lang-go">c := colly.NewCollector(
+    colly.UserAgent(<span class="hljs-string">&quot;myUserAgent&quot;</span>),
+    colly.AllowedDomains(<span class="hljs-string">&quot;foo.com&quot;</span>, <span class="hljs-string">&quot;bar.com&quot;</span>),
+)
+<span class="hljs-comment">// Custom User-Agent and allowed domains are cloned to c2</span>
+c2 := c.Clone()
+</code></pre>
+<h3 id="&#x5728;&#x6536;&#x96C6;&#x5668;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;">&#x5728;&#x6536;&#x96C6;&#x5668;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#x81EA;&#x5B9A;&#x4E49;&#x6570;&#x636E;</h3>
+<p>&#x4F7F;&#x7528;&#x6536;&#x96C6;&#x5668;&#x7684;<strong>Request()</strong>&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4E0E;&#x5176;&#x5B83;&#x6536;&#x96C6;&#x5668;&#x5206;&#x4EAB;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<p>&#x5206;&#x4EAB;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">c.OnResponse(<span class="hljs-keyword">func</span>(r *colly.Response) {
+    r.Ctx.Put(r.Headers.Get(<span class="hljs-string">&quot;Custom-Header&quot;</span>))
+    c2.Request(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;https://foo.com/&quot;</span>, <span class="hljs-literal">nil</span>, r.Ctx, <span class="hljs-literal">nil</span>)
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="后端存储.html" class="navigation navigation-prev " aria-label="Previous page: 后端存储">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="爬虫配置.html" class="navigation navigation-next " aria-label="Next page: 爬虫配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"多收集器的使用","level":"1.3.4","depth":2,"next":{"title":"爬虫配置","level":"1.3.5","depth":2,"path":"基本使用/爬虫配置.md","ref":"基本使用/爬虫配置.md","articles":[]},"previous":{"title":"后端存储","level":"1.3.3","depth":2,"path":"基本使用/后端存储.md","ref":"基本使用/后端存储.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"基本使用/多收集器的使用.md","mtime":"2021-09-28T13:53:17.536Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-08T12:39:20.193Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
